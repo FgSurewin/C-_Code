@@ -168,3 +168,90 @@ sum = sum + 1;
 sum += 1;
 sum++;
 ```
+# Chapter 4: Making Decisions
+
+## Syntax
+
+Basic `if-else` structure
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	int result;
+	cin >> num;
+	
+	if(num > 10){
+		result = num;
+	}else {
+		result = 8;
+	}
+	
+	return 0; // Optional statement
+}
+```
+
+Nested  `if-else` structure
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	int result;
+	cin >> num;
+	
+	if(num > 10){
+		if(num > 25) {
+			result = num;
+		}else {
+			result = 18;
+		}
+	}else {
+		result = 8;
+	}
+	
+	return 0; // Optional statement
+}
+```
+
+The `if-else if` structure
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  // 1. Init the variables
+  double num1;
+  double num2;
+  char operation;
+  char again;
+
+  // 2. Ask for the two inputs.
+  cout << "Please enter the first number: ";
+  cin >> num1;
+  cout << "Please enter the second number: ";
+  cin >> num2;
+  cout << "Please enter the operation: ";
+  cin >> operation;
+
+  // 3. If-else if statements
+  if (operation == 'A') {
+    cout << "The result is " << num1 + num2;
+  } else if (operation == 'S') {
+    cout << "The result is " << num1 - num2;
+  } else if (operation == 'M') {
+    cout << "The result is " << num1 * num2;
+  } else if (operation == 'D') {
+    cout << "The result is " << num1 / num2;
+  }
+
+  cout << endl << "Goodbye!";
+}
+```
+
+## Logical operators
